@@ -1,6 +1,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<!--解决中文乱码一-->
 <?php
+/**
+ * Created by PhpStorm.
+ * User: asus
+ * Date: 2017/12/6
+ * Time: 14:06
+ */
+//<!--解决中文乱码一-->
 //<!--解决中文乱码二-->
 //header("Content-type: text/html; charset=utf-8");
 echo "您好";
@@ -28,7 +34,7 @@ echo var_dump($z);# 查看数据类型
 //NULL　（NULL）
 
  #isset功能：判断变量是否被初始化(变量是否存在)
-  #empty功能：检测变量是否为"空"   
+  #empty功能：检测变量是否为"空"
 $n=10;
 if(isset($n)){
     echo "变量存在";
@@ -41,7 +47,7 @@ if(empty($n)){
 }else{
     echo "变量不为空";
 };
-//传值和传址 传值改为传址用&  默认是传值 可用&改为传址 
+//传值和传址 传值改为传址用&  默认是传值 可用&改为传址
 $a=10;
 $b=&$a;
 $a=11;
@@ -121,5 +127,4 @@ function fun6(){
 fun6();
 fun6();
 fun6();
-
 ?>
