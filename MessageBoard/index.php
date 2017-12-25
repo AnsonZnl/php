@@ -18,20 +18,26 @@
             box-sizing: border-box;
             overflow: hidden;
         }
-        span,strong{
+        p{
+            overflow: hidden;
+        }
+        span{
             float: right;
+        }
+        strong{
+            float: left;
         }
     </style>
 </head>
 <body>
 <div class="main">
-    <form method="post" action="action.php">
+    <form method="post" action="addAction.php">
         <h3>留言板</h3>
-        <textarea name="content" cols="100" rows="10" style="resize:none" ></textarea>
+        <textarea id="content" name="content" cols="100" rows="10" style="resize:none" ></textarea>
         <br>
-        姓名：<input type="text" name="username">
+        姓名：<input id="username" type="text" name="username">
         <br>
-        <input type="submit" value="提交留言">
+        <input type="submit" value="提交留言" onclick="yanzhen()">
     </form>
     <br>
     <?php
@@ -46,18 +52,39 @@
     //sql语句
     $result=mysql_query($sql,$con);
     //查询
+    $i=1;
     while($row=mysql_fetch_array($result))
     {
         echo "<div class='me'>";
-            echo "<p>"."<b>姓名:</b>".$row['name']."<span>".$row['id']."楼"."</span>"."</p>";
+            echo "<p>"."<b>姓名:</b>".$row['name']."<span>".$i++."楼"."</span>"."</p>";
             echo "<p>"."对你说:"."</p>";
-            echo "<p>".$row['content']."<strong>".$row['date']."</strong>"."</p>";
+            echo "<p>"."<strong>".$row['content']."</strong>"."<span>".$row['date']."</span>"."</p>";
+            echo "<p><a href='javascript:void(0);' onclick='del($row[id])' >删除留言</a></p>";
+//        这里表示这个链接不做跳转动作，执行onClick事件。
+//        Javascript中void是一个操作符，该操作符指定要计算一个表达式但是不返回值。
         echo "</div>";
 
     }
     mysql_close($con);
-
+//执行后删除
     ?>
+    <script>
+        function yanzhen() {
+            if (username.value!==""){
+                window.location.href="addAction.php";
+            }else{
+                alert("姓名与内容不得为空")
+            }
+        }
+        function del(thisIndex) {
+            if(confirm("确定删除这条留言吗")){
+                window.location.href="delAction.php?id="+thisIndex;
+            }else {
+                return false;
+            }
+        }
+
+    </script>
 </div>
 </body>
 </html>
