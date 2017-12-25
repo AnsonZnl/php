@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #c6e1f3;
+}
+.main{
+    text-align: center;
+    width: 1050px;
+    margin: auto;
+}
+li{
+    float: left;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.over{
+    overflow: hidden;
+}
+
+.wrap{
+    width: 1050px;
+    margin: 0 auto;
+}
+.me{
+    border-bottom: solid #000 1px;
+    text-align: left;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+p{
+    overflow: hidden;
+}
+span{
+    float: right;
+}
+strong{
+    float: left;
+}
+
+.top-fix-container{
+    position: relative;
+    height: 41px;
+    z-index: 550;
+    background: #000;
+}
+.top-fix-wrap{
+    width: 1046px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    float: left;
+    display: inline-block;
+    width: 90px;
+    height: 41px;
+    background:url("../img/icenter32.png") -63px 0;
+}
+.top-nav {
+    float: left;
+    padding-left: 10px;
+    list-style: none;
+    overflow: hidden;
+}
+.top-nav>li{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.top-nav .icon-icenter{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    margin-right: 4px;
+    font-size: 17px;
+}
+.top-nav>li a{
+    display: block;
+    color: #fff;
+    line-height: 41px;
+    text-decoration: none;
+    font-size: 13px;
+}
+header{
+    height: 250px;
+    padding-top: 20px;
+    background: url("../img/bg.jpg") no-repeat center 0;
+}
+.head-detail{
+    margin-top: 90px;
+}
+.like{
+    height: 20px;
+    width: 40px;
+    margin-right: 50px;
+    margin-top: 50px;
+    padding: 7px 15px;
+    border-radius: 14px;
+    background: #000;
+    opacity:.5;
+    font-size:13px;
+    color: #fff;
+    cursor: pointer;
+}
+.uname h3{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.qz_vip {
+    display: inline-block;
+    width: 97px;
+    height: 46px;
+    background: url(../img/ico2.png) 748px -162px;
+    background-size: 1624px 116px;
+}
+.u_but{
+    font-size: 13px;
+}
+.jindu {
+    width: 182px;
+    height: 10px;
+    margin-top: 10px;
+    background-image: url(../img/ico2.png);
+    background-position: -366px -104px;
+}
+.hz{
+    width: 82px;
+    height: 26px;
+    margin-top: 10px;
+    margin-left: 20px;
+    background-image: url(https://qzonestyle.gtimg.cn/aoi/img/qz-vip-btn/icon-vip-fee.png?max_age=19830212&d=20170302112643);
+}
+/*nav*/
+nav ul{
+    width: 700px;
+    height: 30px;
+    margin: auto;
+}
+nav li{
+    float: left;
+}
+nav li a{
+    display: inline-block;
+    width: 70px;
+    font-size: 15px;
+    color: #000;
+}
+nav li a:hover{
+    text-decoration: blink;
+}
